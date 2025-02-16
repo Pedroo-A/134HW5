@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title> Pedro Arias' Resume</title>
+        <link rel="icon" href="images/favicon.ico">
+    </head>
+
+    <body>
+        <section class="CodeTag">
+            <h4>Code Tag</h4>
+            <p>The <code>code</code> tag is used to display text in a code manner</p>
+            <p> For example <code> background-color</code> See it looks like code.</p>
+
+        </section>
+
+        <div class="iframes">
+            <h3>iframes!!!!</h3>
+            <p>Here is the <cite>University of California San Diego</cite> Website</p>
+            
+            <iframe src="https://ucsd.edu" title="UCSD Website" height="500" width="500"></iframe>
+            <!--Del and ins tags-->
+            <p><del>Display a page</del> <ins>Have a running webpage </ins>within your own page, be careful with it however because it can also slow down your own page.</p>
+        </div>
+
+        <audio-video-tags>
+            <audio controls>
+                <source src="audio.mp3" type="audio/mpeg">
+            </audio>
+            <video controls>
+                <source src="movie.mp4" type="video/mp4">
+            </video>
+        </audio-video-tags>
+
+        <canvas-drawing>
+            <h2>Canvas Drawing</h2>
+            <canvas id="myCanvas" width="300" height="200"></canvas>
+
+            <script>
+
+                let canvas = document.getElementById("myCanvas");
+                let ctx = canvas.getContext("2d"); 
+                ctx.fillStyle = "orange";
+                ctx.fillRect(50, 50, 150, 100); 
+            </script>
+            <p> Used canvas to draw a red sqaure.</p>
+        </canvas-drawing>
+
+        <list-option-selections>
+            <h4>This is an ordered list</h4>
+            <ol>
+                <li>Apples</li>
+                <li>bananas</li>
+                <li>oranges</li>
+                <li>crayons</li>
+            </ol>
+
+            <h4>Using Datalist</h4>
+            <label for="burgerPlace">Choose a Burger Place:</label>
+            <input list="burgerPlaces" id="burgerPlace" name="burgerPlace">
+            <datalist id="burgerPlaces">
+                <option value="Mcdonalds">
+                <option value="In n Out">
+                <option value="Rally's">
+                <option value="Jack in the Box">
+                <option value="Annie's Fine Burgers">
+            </datalist>
+
+            <h4>Option Selectors</h4>
+            <label for="food">Choose a food item:</label>
+            <select id="food" name="food">
+                <optgroup label="Fruits">
+                    <option value="apple">Apple</option>
+                    <option value="banana">Banana</option>
+                    <option value="cherry">Cherry</option>
+                </optgroup>
+                <optgroup label="Vegetables">
+                    <option value="carrot">Carrot</option>
+                    <option value="broccoli">Broccoli</option>
+                    <option value="spinach">Spinach</option>
+                </optgroup>
+            </select>
+        </list-option-selections>
+
+        <section class="searchBar">
+            <search>
+                <input type="text" id="searchquery" name="searchquery">
+                <button type="submit">Search</button>
+            </search>
+        </section>
+
+        <article>
+            <h6>This is cited from wikipedia:</h6>
+            <blockquote cite="https://en.wikipedia.org/wiki/Java_(programming_language)">
+                "Java is a high-level, class-based, object-oriented programming language that is designed to have as few implementation dependencies as possible."
+            </blockquote>
+        </article>
+
+        <section class="dialog">
+            <dialog id="testDialogue" open>
+                <P>This is a dialog box, it works!</P>
+                <p>One of the biggest life savers of all, using shortcuts like <kbd>Ctrl</kbd> + <kbd>C</kbd> and <kbd>Ctrl</kbd> + <kbd>V</kbd></p>
+            </dialog>
+        </section>
+    </body>

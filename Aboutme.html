@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title> Pedro Arias' Resume</title>
+        <link rel="icon" href="images/favicon.ico">
+    </head>
+    <body>
+        <header>
+            <aside>
+                <div id="navTitle">
+                    <svg height="40" width="150">
+                        <rect width="150" height="90" style="fill:red;opacity:0.5" />
+                    <text font-size="30" x="10" y="30">About me</text>
+                    </svg>
+
+                </div>
+                <nav>
+                    <ul>
+                        <li><a href = "Projects.html"><b>Projects</b></a></li><!--Make these look like buttons using CSS-->
+                        <li><a href = "Aboutme.html"><b>About Me</b></a></li>
+                        <li><a href = "Main.html"><b>Back Home</b></a></li>
+                    </ul>
+                </nav>
+            </aside>
+            <hr>
+        </header>
+
+        <template>
+            <h6> Here's some cute pictures of my pet:</h6>
+            <picture>
+                <source media = "(min-width:750x)" srcset="/images/cat.jpeg">
+                <img src="/images/bird.jpg" alt="Cockatiels">
+            </picture>
+        </template>
+
+        <main class="LongBio">
+            <h3>Biography</h3>   
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam sed fringilla metus.
+                 Proin dapibus, est in vehicula laoreet, est leo eleifend felis, ac ullamcorper quam dui quis risus. Duis accumsan tempus turpis. Quisque in erat 
+                 quis sapien fringilla pulvinar non ut ex. Nam varius sit amet velit quis iaculis. Curabitur quis leo et diam scelerisque faucibus at quis lorem. 
+                 Donec purus turpis, molestie vitae metus congue, euismod hendrerit nunc. Aliquam ornare urna in tellus fermentum facilisis. Aliquam lectus diam, 
+                 feugiat eu lacinia in, congue eget quam. Aliquam id leo fringilla, luctus leo et, gravida sem. Quisque tempus quam ligula, at volutpat risus bibendum sed.
+                  Ut in lacus odio.
+            </p>
+            <section class="skillsTable">
+                <table>
+                    <caption>Key Skills</caption>
+                    <colgroup>
+                        <col span="3" style= "background-color: blanchedalmond">
+                    </colgroup>
+                    <tr>
+                        <th> Strong</th>
+                        <th>Proficient</th>
+                        <th>Soft Skills</th>
+                    </tr>
+                    
+                    <tr>
+                        <td>Java</td>
+                        <td>ReactJS</td>
+                        <td>Problem Solver</td>
+                    </tr>
+                    <tr>
+                        <td>Python</td>
+                        <td>HTML/CSS</td>
+                        <td>Persistent</td>
+                    </tr>
+                    <tr>
+                        <td>C/C++</td>
+                        <td>Javascript</td>
+                        <td>Creative</td>
+                    </tr>
+                    <tr>
+                        <td>Microsoft Visual Studio/Eclipse</td>
+                        <td>NodeJS</td>
+                        <td>Patient</td>
+                    </tr>
+                    <tr>
+                        <td>SQL/MongoDB</td>
+                        <td>Unix/Linux Enviornment</td>
+                        <td>Dependable</td>
+                    </tr><tr>
+                        <td>Git-Source Control</td>
+                        <td>Algorithm Analysis</td>
+                        <td>Written/Oral Communication</td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td>Firebase</td>
+                        <td>Innovative</td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td>Object-Oriented Programming</td>
+                        <td></td>
+                    </tr>
+                </table>
+            </section>
+                <details>
+                    <summary><strong>Education</strong></summary>
+                    <p>Bachelor in Science, Computer Science</p>
+                    <p><dfn><abbr title="University of California, San Diego">UCSD</abbr></dfn></p>
+                    <p>Expected: 06/2025 </p>
+                </details>
+        </main>
+        <footer>
+            <hr>
+    
+            <h3>More Contact Information:</h3>
+            <address>
+                <p><strong>Email:</strong></p>
+                paarias@ucsd.edu
+                <p><strong>Phone:</strong></p>
+                <p>619-416-8103</p>
+            </address>
+    
+        </footer>
+    </html>
+    </body>

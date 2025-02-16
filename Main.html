@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title> Pedro Arias' Resume</title>
+        <link rel="icon" href="images/favicon.ico">
+        <style>
+            quick-info-pedro {
+                border-color: black;
+                border-style: solid;
+                display: block;
+            }
+            img{
+                width:300px;
+                height: 400px;
+            }
+        </style>
+    </head>
+    <body>
+        <header>
+            <aside>
+                <div id="navTitle">
+                    <h1>Welcome!</h1>
+                    <hgroup>
+                        <h2>Pedro Arias</h2>
+                        <p><i>Software Developer</i></p>
+                    </hgroup>
+                </div>
+                <nav>
+                    <ul>
+                        <li><a href = "Projects.html"><b>Projects</b></a></li><!--Make these look like buttons using CSS-->
+                        <li><a href = "Aboutme.html"><b>About Me</b></a></li>
+                        <li><a href = "Main.html"><b>Back Home</b></a></li>
+                        <li><a href = "Labs.html"><b>Labs Page</b></a></li>
+                    </ul>
+                </nav>
+            </aside>
+        </header>
+        <!--Remove this later-->
+        <div class="custom element">
+            <hello-world></hello-world>
+
+            <script>
+                class HelloWorld extends HTMLElement {
+                    connectedCallback() {
+                        console.log("Hello world!"); // Logs to the console when added to the DOM
+                    }
+                }
+                // Define the custom element
+                customElements.define("hello-world", HelloWorld);
+            </script>
+        </div>
+
+        <main>
+            <quick-info-pedro>
+                <figure>
+                    <img src="images/placeholderofme.jpg" alt="ImageofMe">
+                    <figcaption> <i><span style="position:inherit;">Pedro Arias</span></i> </figcaption> <!--Finsih this-->
+                </figure>
+
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam sed fringilla metus. Proin dapibus,
+                    molestie vitae metus congue, euismod hendrerit nunc. Aliquam ornare urna in tellus fermentum facilisis. 
+                    liquam lectus diam, feugiat eu lacinia in, congue eget quam. Aliquam id leo fringilla, luctus leo et, 
+                    ravida sem. Quisque tempus quam ligula, at volutpat risus bibendum sed. Ut in lacus odio.</p>
+
+            </quick-info-pedro>
+        </main>
+        <form action="/placeholder.com" method="POST">
+            <fieldset>
+                <legend> <i>Contact me!:</i></legend>
+                <label for="messengerName"> Name: </label>
+                <input type="text" id="messengerName" name="messengerName"> 
+                <br><br>
+                <label for="organizationName"> Organization: </label>
+                <input type="text" id="organizationName" name="organizationName">
+                <br><br>
+                <label for="message"> Message: </label>
+                <br>
+                <textarea id="message" name="message" rows="4" cols="40" placeholder="Please Enter your message here."></textarea>
+                <br>
+                <button type="submit">Send</button>
+            </fieldset>
+        </form>
+
+        <footer>
+            <hr>
+            <h3>More Contact Information:</h3>
+            <address>
+                <p><strong>Email:</strong></p>
+                paarias@ucsd.edu
+                <p><strong>Phone:</strong></p>
+                <p>619-416-8103</p>
+                <p></p>
+            </address>
+    
+        </footer>
+    </html>
+    </body>
+
