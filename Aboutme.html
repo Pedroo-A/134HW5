@@ -5,6 +5,49 @@
         <title> Pedro Arias' Resume</title>
         <link rel="icon" href="images/favicon.ico">
         <link rel="stylesheet" href="styles/styles.css">
+
+        <style>
+            .skillsTable {
+                width: 100%;
+                margin-top: 1rem;
+                padding: 1rem;
+                background-color: rgb(206, 206, 206);
+                overflow-x: auto;
+            }
+            .skillsTable table {
+                width: 100%;
+                min-width: 600px;
+                
+            }
+
+            .skillsTable th, .skillsTable td {
+                padding: 10px;
+                border: 1px solid #ddd;
+                text-align: center;
+            }
+
+            .skillsTable th {
+                background-color: rgb(22, 22, 22);
+                color: white;
+                font-size: 1.2rem;
+                font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+            }
+
+            .skillsTable tr {
+                background-color: #c5c2bf;
+                font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+                font-size: large;
+
+            }
+            
+            #Education {
+                font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+                font-size: 50px;
+            }
+            .h2{
+                font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+            }
+        </style>
     </head>
     <body>
         <header>
@@ -17,8 +60,8 @@
             <nav>
                 <ul>
                     <li><a href = "Projects.html"><b>Projects</b></a></li><!--Make these look like buttons using CSS-->
-                    <li><a href = "Aboutme.html"><b>About Me</b></a></li>
-                    <li><a href = "Main.html"><b>Back Home</b></a></li>
+                    <li><a href = "Aboutme.html"style="background-color: #c5c2bf;"><b>About Me</b></a></li>
+                    <li><a href = "main.html"><b>Back Home</b></a></li>
                 </ul>
             </nav>
             <footer>
@@ -44,17 +87,26 @@
         </template>
 
         <main class="LongBio">
-            <h3>Biography</h3>   
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam sed fringilla metus.
-                 Proin dapibus, est in vehicula laoreet, est leo eleifend felis, ac ullamcorper quam dui quis risus. Duis accumsan tempus turpis. Quisque in erat 
-                 quis sapien fringilla pulvinar non ut ex. Nam varius sit amet velit quis iaculis. Curabitur quis leo et diam scelerisque faucibus at quis lorem. 
-                 Donec purus turpis, molestie vitae metus congue, euismod hendrerit nunc. Aliquam ornare urna in tellus fermentum facilisis. Aliquam lectus diam, 
-                 feugiat eu lacinia in, congue eget quam. Aliquam id leo fringilla, luctus leo et, gravida sem. Quisque tempus quam ligula, at volutpat risus bibendum sed.
-                  Ut in lacus odio.
-            </p>
+            <hgroup>
+                <h2>Biography</h2>   
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam sed fringilla metus.
+                        Proin dapibus, est in vehicula laoreet, est leo eleifend felis, ac ullamcorper quam dui quis risus. Duis accumsan tempus turpis. Quisque in erat 
+                        quis sapien fringilla pulvinar non ut ex. Nam varius sit amet velit quis iaculis. Curabitur quis leo et diam scelerisque faucibus at quis lorem. 
+                        Donec purus turpis, molestie vitae metus congue, euismod hendrerit nunc. Aliquam ornare urna in tellus fermentum facilisis. Aliquam lectus diam, 
+                        feugiat eu lacinia in, congue eget quam. Aliquam id leo fringilla, luctus leo et, gravida sem. Quisque tempus quam ligula, at volutpat risus bibendum sed.
+                        Ut in lacus odio.
+                </p>
+            </hgroup>
+                <div class="Education">
+                    <summary><strong>Education</strong></summary>
+                    <p>Bachelor in Science, Computer Science</p>
+                    <p><dfn><abbr title="University of California, San Diego">UCSD</abbr></dfn></p>
+                    <p>Expected: 06/2025 </p>
+                </details>
+            </div>
             <section class="skillsTable">
                 <table>
-                    <caption>Key Skills</caption>
+                    <caption><h2>Key Skills</h2></caption>
                     <colgroup>
                         <col span="3" style= "background-color: blanchedalmond">
                     </colgroup>
@@ -105,12 +157,7 @@
                     </tr>
                 </table>
             </section>
-                <details>
-                    <summary><strong>Education</strong></summary>
-                    <p>Bachelor in Science, Computer Science</p>
-                    <p><dfn><abbr title="University of California, San Diego">UCSD</abbr></dfn></p>
-                    <p>Expected: 06/2025 </p>
-                </details>
+                
         </main>
     </html>
     </body>
