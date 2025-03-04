@@ -25,11 +25,12 @@ function toggleTheme() {
     setTheme(newTheme);
 }
 
-// On page load, apply the saved theme (defaults to light)
+
 var savedTheme = localStorage.getItem("theme") || "light";
 setTheme(savedTheme);
 
-// Set up the click listener on the theme toggle button
+
 if (themeToggleButton) {
     themeToggleButton.addEventListener("click", toggleTheme);
+    themeToggleButton.style.display = "inline-block";
 }
