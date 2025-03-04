@@ -1,5 +1,7 @@
 :root{
-    --page-height: 100dvh;
+    --bg-color: #ffffff;
+    --text-color: #000000;
+    --page-height: 100vh;
     --page-width:100vw;
     --font-body:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
     --font-header:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
@@ -7,11 +9,22 @@
     --secondary-color: color(display-p3 0.85 0.85 0.85);
 }
 
+#themeToggleButton {
+    background: none;
+    border: none;
+    cursor: pointer;
+    font-size: 24px;
+    padding: 0;
+}
+
+
 body {
+    background-color: var(--bg-color);
+    color: var(--text-color);
     display: grid;
     grid-template-columns: 1fr 3fr;
     grid-template-rows:auto 1fr;
-    height: var(--page-height);
+    min-height: var(--page-height);
     width: var(--page-width);
     margin: 0;
 }
@@ -20,7 +33,7 @@ header {
     display: flex;
     flex-direction: column;
     background-color:var(--primary-color,rgb(206, 206, 206));
-    height: var(--page-height, 100%); 
+    min-height: var(--page-height, 100%); 
     width: 30vw;
     border-color: black;
     border-style: solid;

@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title> Pedro Arias' Resume</title>
+        <link rel="icon" href="../images/favicon.ico">
+        <link rel="stylesheet" href="../styles/styles.css">
+
+
+        <style>
+            quick-info-pedro{
+                display: flex;
+                flex-direction: column;
+                justify-content: flex-start;
+                align-items: center;
+                overflow-y: auto;
+                font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+                
+            }
+            img{
+                width:20em;
+                height: 29em;
+                display: block;
+                
+            }
+            figcaption{
+                font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+                font-weight: 200;
+                font-size: 1.4rem;
+            }
+            form {
+                width: 40vw;
+                max-width: 100%;
+                margin-top: 1rem;
+                padding: 1rem;
+                border: 1px solid #ccc;
+                border-radius: 8px;
+                background: #a09f9f;
+            }
+
+            /*HERE IS PART 2 CSS*/
+
+            input:user-invalid, textarea:user-invalid {
+                border: 2px solid red;
+                background-color: #ffdddd;
+            }
+
+            input:valid, textarea:valid {
+                border: 2px solid green;
+            }
+            
+            .errorMessage {
+                color: red;
+                font-size: 0.9rem;
+                display: none;
+                margin-top: 4px;
+            }
+
+            form:has(:user-invalid) .errorMessage {
+                display: block;
+            }
+
+            .infoMessage {
+                color: green;
+                font-size: 0.9rem;
+                display: none;
+                margin-top: 4px;
+                font-weight: bold;
+            }
+
+            button:focus + .infoMessage {
+                display: block;
+            }
+            /*PART 2 CSS ENDS HERE*/
+
+
+            @media (max-width: 768px) {
+                form {
+                    width: 90%;
+                    position: relative;
+                    top: -20px; 
+                    padding: 2rem;
+                }
+
+                input, textarea {
+                    font-size: 1.2rem; 
+                }
+            }
+        </style>
+    </head>
+    <body>
+        <header>
+            <div id="navTitle">
+                <hgroup>
+                <h1>Pedro Arias</h1>
+                <p><i>Software Developer</i></p>
+                </hgroup>
+            </div>
+            <nav>
+                <ul>
+                    <li><a href = "Projects.html"><b>Projects</b></a></li><!--Make these look like buttons using CSS-->
+                    <li><a href = "Aboutme.html"><b>About Me</b></a></li>
+                    <li><a href = "../main.html"style="background-color: #c5c2bf;"><b>BACK TO MAIN</b></a></li>
+                    <li><a href = "Labs.html"><b>Labs Page</b></a></li>
+                </ul>
+            </nav>
+            
+        <footer>
+            <hr>
+            <h3>More Contact Information:</h3>
+            <address>
+                <p><strong>Email:</strong></p>
+                paarias@ucsd.edu
+                <p><strong>Phone:</strong></p>
+                <p>619-416-8103</p>
+                <p></p>
+            </address>
+    
+        </footer>
+    </html>
+    </body>
+        </header>
+        <main>
+            <quick-info-pedro>
+                <figure>
+                    <img src="images/placeholderofme.jpg" alt="ImageofMe">
+                    <figcaption> <i><span style="position:inherit;">Pedro Arias</span></i> </figcaption> <!--Finsih this-->
+                </figure>
+
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam sed fringilla metus. Proin dapibus,
+                    molestie vitae metus congue, euismod hendrerit nunc. Aliquam ornare urna in tellus fermentum facilisis. 
+                    liquam lectus diam, feugiat eu lacinia in, congue eget quam. Aliquam id leo fringilla, luctus leo et, 
+                    ravida sem. Quisque tempus quam ligula, at volutpat risus bibendum sed. Ut in lacus odio.</p>
+
+            </quick-info-pedro>
+
+
+            <!--PART 2 HTML BEGINS HERE-->
+            <form action="https://httpbin.org/post" method="POST">
+                <fieldset>
+                    <legend> <i>Contact me!</i></legend>
+                    <label for="messengerName"> Name: </label><br>
+                    <input type="text" id="messengerName" name="messengerName" pattern="[A-Za-z\s\-]+"required> 
+                    <br><br>
+                    <label for="Email"> Email: </label><br>
+                    <input type="email" id="Email" name="Email" required>
+                    <br><br>
+                    <label for="Comments"> Comments: </label>
+                    <br>
+                    <textarea id="Comments" name="Comments" rows="4" cols="40" minlength="2" maxlength="500" placeholder="Please Enter your message here." required></textarea>
+                    <br>
+                    <input type="hidden" name="possible_bot" value="true">
+                    <button type="submit">Send</button>
+                    <div class="outputContainer">
+                        <output id="errorOutput" class="errorMessage">There is an error in these fields, please fix them then hit submit.</output>
+                        <output id="infoOutput" class="infoMessage">Message Sent!</output>
+
+                    </div>
+                </fieldset>
+            </form>
+        </main>
+
+
+

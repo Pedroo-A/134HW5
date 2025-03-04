@@ -7,7 +7,6 @@
         <link rel="stylesheet" href="styles/styles.css">
         <style>
             dl {
-                background-color: white;
                 padding: 2rem;
                 border-radius: 10px;
             }
@@ -15,7 +14,7 @@
             dt {
                 font-size: 1.5rem;
                 font-weight: bold;
-                background-color: yellow;
+
                 margin-top: 1rem;
             }
 
@@ -37,18 +36,21 @@
                         <li><a href = "main.html"><b>Back Home</b></a></li>
                     </ul>
                 </nav>
-            <noscript> Javascript is turned off. Luckily there is no Javascript on this page!</noscript>
-            <footer>
-                <hr>
-                <h3>More Contact Information:</h3>
-                <address>
-                    <p><strong>Email:</strong></p>
-                    paarias@ucsd.edu
-                    <p><strong>Phone:</strong></p>
-                    <p>619-416-8103</p>
-                </address>
-        
-            </footer>
+                <noscript> Javascript is turned off. To use the Theme Switcher Please turn on Javascript</noscript>
+                <button id="themeToggleButton" label = "Toggle Theme">
+                    <span id="themeIcon">☀</span>
+                </button>
+                <footer>
+                    <hr>
+                    <h3>More Contact Information:</h3>
+                    <address>
+                        <p><strong>Email:</strong></p>
+                        paarias@ucsd.edu
+                        <p><strong>Phone:</strong></p>
+                        <p>619-416-8103</p>
+                    </address>
+            
+                </footer>
         </header>
 
         <main>
@@ -61,6 +63,7 @@
                 <dd>Using Java functions, drones survey the land, presenting geological readings of elevation for farmers.</dd>
             </dl>
         </main>
+        <script src="scripts/themes.js"></script>
     </body>
 
 
