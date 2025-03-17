@@ -1,0 +1,31 @@
+[
+    {
+      "title": "UCSD Club Event Board",
+      "description": "Lead team as a Project Manager to design an application for club events.",
+      "image": "https://pub-1fe6ae38e77740cdbf23086552601502.r2.dev/image_2025-03-11_224817846.png",
+      "imgAlt": "UCSD Event Board Application screenshot",
+      "link": "https://github.com/panda2k/cse110-project"
+    },
+    {
+      "title": "2020",
+      "description": "Developed a Drone Surveyor that assists farmers in surveying their land.",
+      "image": "images/drone-surveyor.jpg",
+      "imgAlt": "Drone Surveyor for Farmers screenshot(I don't have an image for this project)",
+      "link": "https://github.com/Pedroo-A/chat-server"
+    },
+    {
+        "title": "Machine Learning Model on Pokemon Cards",
+        "description": "Worked with a team to create a machine learning model to predict characteristics of pokemon cards such as price and rarity. ",
+        "image": "https://pub-1fe6ae38e77740cdbf23086552601502.r2.dev/image_2025-03-16_230736265.png",
+        "imgAlt": "Example of Model Training Accuracy",
+        "link": "https://github.com/charvishukla/cse151a-pokemon-project"
+    },
+    {
+        "title": "Aid in Sports Betting",
+        "description": "Collaborated with a team to develop a machine learning model that analyzes historical basketball player data to assist users in making more informed betting decisions.",
+        "image": "https://pub-1fe6ae38e77740cdbf23086552601502.r2.dev/image_2025-03-16_234011273.png",
+        "imgAlt": "Example of Sports betting project",
+        "link": "https://github.com/acmucsd-projects/fa23-ai-team-meowww"
+    }
+  ]
+  

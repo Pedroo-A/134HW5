@@ -6,23 +6,75 @@
         <link rel="icon" href="images/favicon.ico">
         <link rel="stylesheet" href="styles/styles.css">
         <style>
-            dl {
-                padding: 2rem;
-                border-radius: 10px;
+            :root {
+                --card-bg: lightgray;
+                --card-radius: 10px;
+                --card-padding: 1rem;
+                --text-color: #333;
+                --secondary-text: #888;
+                --grid-gap: 20px;
+            }
+        
+            #project-container {
+                display: grid;
+                grid-template-columns: repeat(3, 1fr);
+                gap: var(--grid-gap);
+                padding: 20px;
+                justify-items: center;
+            }
+        
+            .project-card {
+                background: var(--card-bg);
+                border-radius: var(--card-radius);
+                box-shadow: var(--card-shadow);
+                max-width: fit-content;
+                max-height: fit-content;
+                text-align: left;
+                padding: var(--card-padding);
+            }
+        
+            .project-card img {
+                width:20vw;
+                height: 30vh;
+                display: block;
+                border-bottom: 2px solid var(--secondary-text);
+            }
+        
+            .project-card h2 {
+                font-size: 1.2rem;
+                color: var(--text-color);
+                margin: 10px 0;
+            }
+        
+            .project-card p {
+                font-size: 0.9rem;
+                color: var(--secondary-text);
+                margin: 5px 0;
+            }
+        
+            .project-card a {
+                display: inline-block;
+                padding: 8px 12px;
+                margin-top: 10px;
+                background: #918f8f;
+                color: white;
+                text-decoration: none;
+                border-radius: 5px;
+                text-align: center;
+            }
+        
+            .project-card a:hover {
+                background: #3f3f3f;
+            }
+            /* Styling for the load buttons */
+            .load-buttons {
+                text-align: center;
+                margin: 20px 0;
             }
 
-            dt {
-                font-size: 1.5rem;
-                font-weight: bold;
 
-                margin-top: 1rem;
-            }
-
-            dd {
-                font-size: 1rem;
-                margin-left: 1.5rem;
-            }
         </style>
+        
     </head>
     <body>
         <header>
@@ -54,16 +106,46 @@
         </header>
 
         <main>
-            <dl>
-                <dt><em>UCSD Event Board Application</em></dt>
-                <dd>Lead team as a Project Manager to design an application that would allow club owners to post their events on an event board and for students to both explore new events and RSVP to events.</dd>
-                <dd>Created user front page using React and used SQL as a backend database.</dd>
-                <dt><em>Drone Surveyor for Farmers</em></dt>
-                <dd>Created a simple program that would assist farmers in surveying their land through the use of drones.</dd>
-                <dd>Using Java functions, drones survey the land, presenting geological readings of elevation for farmers.</dd>
-            </dl>
+            <!--HW 5 change "added no script to original HTML code, so some information still appears."-->
+            <noscript>Please turn on HTML to view the projects</noscript>
+            <!-- Buttons for Data Loading -->
+            <div class="project-container" id="project-container">
+
+            </div>
         </main>
         <script src="scripts/themes.js"></script>
+        <script type="module" src="./Project-Cards.js"></script>
+
+        <script>
+            document.addEventListener('DOMContentLoaded', async () => {
+                const container = document.getElementById("project-container");
+                let projects = JSON.parse(localStorage.getItem("projects"));
+
+                if (!projects) {
+                    try{
+                        const response = await fetch('projects.json');
+                        if (!response.ok) {
+                            throw new Error(`Failed to fetch projects. Status: ${response.status}`);
+                        }
+                        projects = await  response.json();
+                        localStorage.setItem("projects", JSON.stringify(projects));
+                    }catch(error) {
+                        console.error("Error fetching projects:", error);
+                        return;
+                    }
+                }
+                projects.forEach(project => {
+                    const projectCard = document.createElement("project-card");
+                    projectCard.setAttribute("title", project.title);
+                    projectCard.setAttribute("description", project.description);
+                    projectCard.setAttribute("image", project.image);
+                    projectCard.setAttribute("imgAlt", project.imgAlt);
+                    projectCard.setAttribute("link", project.link);
+
+                    container.appendChild(projectCard);
+                })
+            })
+        </script>
     </body>
 
 
